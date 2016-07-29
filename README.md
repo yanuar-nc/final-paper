@@ -1,9 +1,6 @@
 
-************************* Judul Skripsi ************************
-** Service Oriented Architecture Untuk		 				  **
-** Pendistibusian Data Menggunakan RESTful APIs               **
-** Berbasis Multiplatform                                     **
-****************************************************************
+# Judul Skripsi
+##Service Oriented Architecture Untuk Pendistibusian Data Menggunakan RESTful APIs Berbasis Multiplatform
 
 # Masalah
 Beberapa kampus atau perpustakaan umum ingin mendapatkan journal nasional
