@@ -1,0 +1,50 @@
+/**
+ * {{host}}/books/detail/{{book_id}}?token={{access_token}}
+ * @params: book_id (integer)
+ */
+{
+  "status": {
+    "code": 200,
+    "message": "Success",
+    "description": "",
+    "time": "0.003ms"
+  },
+  "data": {
+    "book": {
+      "id": 80,
+      "title": "Measuring the Performance of Autoregressive Integrated Moving Average and Vector Autoregressive Models in Forecasting Inflation Rate in Rwanda ",
+      "subtitle": null,
+      "author": "Joselyne INGABIRE, Dr. Joseph K. Mung’atu",
+      "book_type": "text-book",
+      "description": "The aim of this study is to test and distinguish which of ARIMA and VAR models performs best in forecasting inflation in Rwanda. In order to fulfil this objective observed quarterly data from 2000Q1 to 2015Q1 on economic variables such as the Consumer Price Index, Money Supply, Gross Domestic Product, T-bills Rate and Exchange Rate are used to build models. Box-Jenkins approach is used to build ARIMA model on Consumer Price Index data and it has been found that ARIMA (3, 1, 4) perform better. In VAR analysis Johansen’s Cointegration approach is applied and the results showed that there is long run and short run relationship between dependent variable (inflation) and independent variables. The performance of these models in forecasting inflation is evaluated using Root Mean Squared Errors (RMSE), Mean Absolute Errors (MAE), Mean Absolute Percentage Errors (MAPE) and the results showed that ARIMA (3, 1, 4) perform better than VAR model in forecasting inflation in Rwanda. Keywords: Inflation, forecast, Cointegration, ARIMA and VAR Models. Title: Measuring the Performance of Autoregressive Integrated Moving Average and Vector Autoregressive Models in Forecasting Inflation Rate in Rwanda Author: Joselyne INGABIRE, Dr. Joseph K. Mung’atu. International Journal of Mathematics and Physical Sciences Research ISSN 2348-5736 (Online) Research Publish Journals \r\n",
+      "keyword": "",
+      "file": "http://www.researchpublish.com/download.php?file=Measuring%20the%20Performance-3131.pdf&act=book",
+      "image": "",
+      "page": null,
+      "issn": "2348-5736",
+      "publisher": "International journal of mathematics and physical sciences research",
+      "volume": 4,
+      "year": 2016,
+      "month": 4,
+      "date": 0,
+      "row_status": 1
+    }
+  }
+}
+/**
+ * Failed
+ */
+{
+  "status": {
+    "code": 401,
+    "message": "Unauthorized",
+    "description": "Your password is wrong",
+    "time": "0.002ms"
+  },
+  "data": {
+    "error": {
+      "username": "nymphetaminex",
+      "key": "52$QS^OVNjz4AnbWjwbyZ*I8F&MgIXXRDPm2XFDSJDpX8dUmP^zLVO#tE-g&yk)O"
+    }
+  }
+}

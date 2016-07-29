@@ -1,0 +1,16 @@
+/**
+ * @method POST
+ * {{host}}/books/add/{id} (id: integer)
+ * @params: itle, subtitle, author, description, keyword, file, image, page, issn, publisher, year, volume, month, date
+ */
+{
+  "status": {
+    "code": 200,
+    "message": "Success",
+    "description": "",
+    "time": "0.1ms"
+  },
+  "data": {
+    "message": "Berhasil di simpan"
+  }
+}

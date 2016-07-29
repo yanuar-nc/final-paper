@@ -1,0 +1,36 @@
+/**
+ * {{host}}/authenticate
+ * @params: username, key
+ */
+{
+  "status": {
+    "code": 200,
+    "message": "Success",
+    "description": "",
+    "time": "0.003ms"
+  },
+  "data": {
+    "success": true,
+    "message": "Enjoy your token!",
+    "expires": "86400 second",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6Im55bXBoZXRhbWluZSIsInBhc3N3b3JkIjoiZGFkMDhmZTJiMGU1N2FkOTc1NmRmNTY4MjMzOGVmZjAiLCJhcGlfa2V5IjoiNTIkUVNeT1ZOano0QW5iV2p3YnlaKkk4RiZNZ0lYWFJEUG0yWEZEU0pEcFg4ZFVtUF56TFZPI3RFLWcmeWspTyIsImxldmVsIjo5OSwic3RhdHVzIjoxfSwiaWF0IjoxNDY5NjkxODYzLCJleHAiOjE0Njk3NzgyNjN9.XwZefCw5EIF3MAYW8DIrTqJ5uLKEKErkgpqY3eA4NVk"
+  }
+}
+
+/**
+ * Failed
+ */
+{
+  "status": {
+    "code": 401,
+    "message": "Unauthorized",
+    "description": "Your password is wrong",
+    "time": "0.002ms"
+  },
+  "data": {
+    "error": {
+      "username": "nymphetaminex",
+      "key": "52$QS^OVNjz4AnbWjwbyZ*I8F&MgIXXRDPm2XFDSJDpX8dUmP^zLVO#tE-g&yk)O"
+    }
+  }
+}

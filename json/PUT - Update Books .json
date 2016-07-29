@@ -1,0 +1,21 @@
+/**
+ * @method PUT
+ * {{host}}/books/edit/{id} (id: integer)
+ * @params: itle, subtitle, author, description, keyword, file, image, page, issn, publisher, year, volume, month, date
+ */
+{
+  "status": {
+    "code": 200,
+    "message": "Success",
+    "description": "",
+    "time": "0.056ms"
+  },
+  "data": {
+    "result": {
+      "publisher": "International Journal of Engineering Research and Reviews",
+      "issn": "2348 - 697X",
+      "id": "97"
+    },
+    "message": "Berhasil di update"
+  }
+}
