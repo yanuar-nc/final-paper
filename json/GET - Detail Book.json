@@ -1,5 +1,5 @@
 /**
- * {{host}}/books/detail/{{book_id}}?token={{access_token}}
+ * {{host}}/books/detail/{{book_id}}
  * @params: book_id (integer)
  */
 {
