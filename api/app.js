@@ -68,57 +68,6 @@ app.use( function(req, res, next) {
 app.use( function( req, res, next ) {
 	start = new Date()
 
-	// check header or url parameters or post parameters for token
-	// var token = req.body.token || req.param('token') || req.headers['x-access-token'];
-
-	// decode token
-	// if (token) {
-
-	// 	var user;
-	//     db.query(
-	// 		'SELECT b.* FROM access_tokens a INNER JOIN users b ON a.user_id = b.id WHERE a.token = ? LIMIT 1', 
-	// 		token, 
-	// 		function(err,rows) {
-	// 			if ( rows.length > 0 ){
-					
-	// 				var row     = rows[0];
-	// 				user_data	= row;
-	// 				user_level  = row.level;
-
-					// verifies secret and checks exp
-					// jwt.verify(token, row.api_key, function(err, decoded) {			
-					// 	if (err) {
-						// 	return fn.getResponse( res, err, 401, 'Failed to authentiace token.' );
-						// 	return;
-						// } else {
-							// if everything is good, save to request for use in other routes
-	// 						return;
-	// 					}
-	// 				});
-
-	// 			}
-	// 		}
-	// 	)			
-
-	// } else {
-
-		// if there is no token
-		// return an error
-	// 	if( req.url != '/authenticate' ){
-
-	// 		if( req.url == '/' ) {
-	// 			fn.getResponse( res, 'welcome, the API' ,200 )
-	// 		}
-	// 		return res.status(401).send({ 
-	// 			success: false, 
-	// 			message: 'No token provided.' + req.url
-	// 		});
-	// 	} else {
-
-	// 	}
-		
-	// }
-
 	responsetime = ( new Date() - start) / 1000;
 
 	next()	
