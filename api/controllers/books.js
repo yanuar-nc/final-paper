@@ -32,20 +32,20 @@ exports.index = function( req, res ) {
 	} );
 
 	// Untuk paging
-	if ( req.param( 'page' ) )
+	if ( req.query.page )
 	{
-		page   = req.param( 'page' ) - 1;
+		page   = req.query.page - 1;
 		offset = page*limit;
 		page   += 1;
 	}
 
 	// Bila ingin menambahkan sorting
-	if ( req.param( 'sort' ) )
+	if ( req.query.sort )
 	{
-		order = req.param( 'sort' )
-		if ( req.param( 'direction' ) ) 
+		order = req.query.sort
+		if ( req.query.direction ) 
 		{
-			order += ' ' + req.param( 'direction' )
+			order += ' ' + req.query.direction
 		}
 	}
 

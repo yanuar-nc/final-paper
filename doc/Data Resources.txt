@@ -1,6 +1,7 @@
 Data:
 - http://www.jurnal.lipi.go.id
 - http://www.ijastnet.com/
+- http://www.aijcrnet.com/
 - http://journals.itb.ac.id
 - http://lib.ui.ac.id
 - http://journal.ui.ac.id
