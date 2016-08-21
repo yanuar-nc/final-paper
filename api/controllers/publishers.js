@@ -66,7 +66,7 @@ exports.detail = function( req, res ) {
 	    db.query( query , [id, 1], function(err,rows) {
 	    	
 	        if( err ) fn.getResponse( res, { error: err }, 422 );
-	     	if( rows && rows.length > 0 ) fn.getResponse( res, { book: rows[0] } );
+	     	if( rows && rows.length > 0 ) fn.getResponse( res, { journal: rows[0] } );
 	     	else fn.getResponse( res, null, 404, 'Data is not found' );
 
 	    });
@@ -108,7 +108,7 @@ exports.search = function( req, res ) {
      		count: count, 
      		total_pages: total_pages, 
      		current_page: page,
-     		books: rows 
+     		journals: rows 
      	} );
 
     });

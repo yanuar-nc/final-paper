@@ -32,7 +32,7 @@ var app 	= express();
  * REQUIRE ROUTES
  */
 var users 		 = require( './controllers/users' );
-var books 		 = require( './controllers/books' );
+var journals 		 = require( './controllers/journals' );
 var publishers   = require( './controllers/publishers' );
 authenticate 	 = require( './controllers/authenticate' );
 
@@ -96,14 +96,14 @@ app.get('/welcome', function (req, res) {
 app.get ( '/users', 	users.index );
 app.post( '/users/add', users.add );
 
-// == Book Functions ==
-app.get ( '/books', 			  books.index );
-app.get ( '/books/:type', 		  books.index );
-// app.get ( '/books/journal',       books.journal );
-app.post( '/books/add', 		  books.add );
-app.put ( '/books/edit/:id', 	  books.edit );
-app.get ( '/books/search/:query', books.search );
-app.get ( '/books/detail/:id', 	  books.detail );
+// == Journal Functions ==
+app.get ( '/journals', 			  journals.index );
+app.get ( '/journals/:type', 		  journals.index );
+// app.get ( '/journals/journal',       journals.journal );
+app.post( '/journals/add', 		  journals.add );
+app.put ( '/journals/edit/:id', 	  journals.edit );
+app.get ( '/journals/search/:query', journals.search );
+app.get ( '/journals/detail/:id', 	  journals.detail );
 
 // == Publisher Functions
 app.get ( '/publishers', 		  publishers.index );
