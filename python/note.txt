@@ -8,4 +8,9 @@ python -m pip install
 or
 python -m pip install --upgrade
 
-3. Install django
+3. Install flask
+
+4. SET FLASK_APP = website.py
+
+5. RUN FLASK
+python -m flask run

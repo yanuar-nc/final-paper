@@ -31,8 +31,9 @@ module.exports = function() {
 				'status': statusData,
 				'data': data
 			}	
-
-			return res.status( code ).send( JSON.stringify(result, null, 4) )
+			// console.log(JSON.stringify({ uno: 1, dos: 2 }, null, '\t'))
+			// console.log(JSON.stringify(result, null, '\t'))
+			return res.status( code ).send( JSON.stringify(result, null, '\t') )
 		},
 		merge: function( obj1, obj2 ) {
 

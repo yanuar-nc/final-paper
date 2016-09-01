@@ -21,7 +21,7 @@ exports.index = function( req, res ) {
 	// if ( req.param( 'query' ) != undefined ) conditions += ' AND title LIKE "%' + req.param( 'query' ) + '%" ';
 
 	// condition untuk kategori tipe buku
-	if( req.params.type != undefined ) conditions += ' AND journal.journal_type = "' + req.params.type + '" ';
+	// if( req.params.type != undefined ) conditions += ' AND journal.journal_type = "' + req.params.type + '" ';
 
 	if( req.query.limit != undefined ) {limit = req.query.limit;}
 
@@ -74,7 +74,6 @@ exports.index = function( req, res ) {
 exports.detail = function( req, res ) {
 	
 	var id = req.params.id;
-
 	if ( validation.checkInt( id ) ) {
 			
 		var conditions = [ 'journal.id', 'journal.row_status' ];

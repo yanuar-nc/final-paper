@@ -27,7 +27,7 @@ var secretKey 	 = require( './config/secret-keys.js' );
 start = new Date();
 
 var app 	= express();
-
+// app.set('log level', 1);
 /*
  * REQUIRE ROUTES
  */
@@ -84,7 +84,7 @@ app.use( function( req, res, next ) {
 
 
 /*
- * ALL ROUTES URL
+ * ALL URL ROUTES
  */
 app.post('/authenticate', authenticate.create );
 
@@ -118,6 +118,7 @@ app.post( '/profile', function (req, res, next) {
 app.get('*', function(req, res){
   fn.getResponse(res, 'Url is not found' ,404 )
 });
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

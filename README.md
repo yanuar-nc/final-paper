@@ -6,3 +6,5 @@
 Beberapa kampus atau perpustakaan umum ingin mendapatkan journal nasional
 Tapi mereka tidak memiliki data tersebut
 Sedangkan platform mereka berbagai macam yang digunakan
+
+# Noted
