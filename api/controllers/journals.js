@@ -174,32 +174,31 @@ exports.add = function( req, res ) {
 
 }
 
-exports.edit = function( req, res,next ) {
+exports.edit = function( req, res ) {
 
+// console.log(res)
 	// if ( user_level == 99 ) {
 	
 		var id = req.params.id;
 
-		if ( validation.checkInt( id ) ) {
+		// if ( validation.checkInt( id ) ) {
 	
 
 			var post  = req.body;
-			delete post.token;
 
 			db.query( 
 				modelInstance.updateData( id ), 
 				post,
 				function( err, rows ) {
 					post.id = id;
-			        if( err ) fn.getResponse( { error: err }, 400 );
+			        if( err ) fn.getResponse( res, { error: err, post: post }, 400 );
 			     	if( rows ) fn.getResponse( res, { post, 'message': 'Berhasil di update' } )
 				}
 			)
 
-			return
-		}
-		fn.getResponse( { error: 'ID must integer' }, 400 );
-		next()
+		// }
+		// fn.getResponse( { error: 'ID must integer' }, 400 );
+		// next()
 	// } else {
 	// 	return fn.getResponse( res, null, 403, 'You cannot access that request.' )
 	// }
