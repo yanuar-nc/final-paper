@@ -13,4 +13,4 @@ python -m pip install --upgrade
 4. SET FLASK_APP = website.py
 
 5. RUN FLASK
-python -m flask run
+python -m flask run --host=0.0.0.0

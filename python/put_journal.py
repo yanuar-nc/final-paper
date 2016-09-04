@@ -12,9 +12,9 @@ def hello_world():
 
     global start, time
 
-    url = "http://10.0.13.35:2000/journals/edit/66"
+    url = "http://localhost:2000/journals/edit/114"
 
-    payload = "title=Effect%20of%20Index%20Derivative%20Trading%20on%20Indian%20Stock%20Market%3A%20A%20Comparison%20of%20Pre%20and%20post%20Introduction%20period"
+    payload = "title=The%20Sun%20is%2C%20oh%2C%20so%20desperate%20to%20set%20tonight"
     headers = {
         'x-access-token': "52$QS^OVNjz4AnbWjwbyZ*I8F&MgIXXRDPm2XFDSJDpX8dUmP^zLVO#tE-g&yk)O",
         'cache-control': "no-cache",

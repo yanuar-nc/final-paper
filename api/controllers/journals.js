@@ -78,7 +78,7 @@ exports.detail = function( req, res ) {
 			
 		var conditions = [ 'journal.id', 'journal.row_status' ];
 		var query = modelInstance.getDetail( conditions, null );
-		console.log( query );
+		// console.log( query );
 	    db.query( query , [id, 1], function(err,rows) {
 	    	
 	        if( err ) fn.getResponse( res, { error: err }, 422 );
@@ -100,9 +100,9 @@ exports.search = function( req, res ) {
 		 offset = 0,
 		 order  = 'journal.id DESC'; 
 
-		console.log(req.params);
+		// console.log(req.params);
 	// Jika search
-	if ( req.param( 'query' ) != undefined ) conditions += ' AND title LIKE "%' + req.param( 'query' ) + '%" ';
+	if ( req.params.query != undefined ) conditions += ' AND title LIKE "%' + req.params.query + '%" ';
 
 	// condition untuk kategori tipe buku
 	if( req.params.type != undefined ) conditions += ' AND journal.journal_type = "' + req.params.type + '" ';
@@ -114,20 +114,20 @@ exports.search = function( req, res ) {
 	} );
 
 	// Untuk paging
-	if ( req.param( 'page' ) )
+	if ( req.params.page )
 	{
-		page   = req.param( 'page' ) - 1;
+		page   = req.params.page - 1;
 		offset = page*limit;
 		page   += 1;
 	}
 
 	// Bila ingin menambahkan sorting
-	if ( req.param( 'sort' ) )
+	if ( req.params.sort )
 	{
-		order = req.param( 'sort' )
-		if ( req.param( 'direction' ) ) 
+		order = req.params.sort
+		if ( req.params.direction ) 
 		{
-			order += ' ' + req.param( 'direction' )
+			order += ' ' + req.params.direction
 		}
 	}
 

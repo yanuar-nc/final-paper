@@ -12,7 +12,7 @@ def hello_world():
 
     global start, time
 
-    r = requests.get( 'http://localhost:2000/journals', auth=('user', 'pass'))
+    r = requests.get( 'http://localhost:2000/journals/detail/50', auth=('user', 'pass'))
     # Get json 
     datas = json.dumps( r.json(), sort_keys=True,indent=4, separators=(',', ': '))
     
