@@ -17,12 +17,6 @@ exports.index = function( req, res ) {
 		 offset = 0,
 		 order  = 'journal.id DESC'; 
 
-	// Jika search
-	// if ( req.param( 'query' ) != undefined ) conditions += ' AND title LIKE "%' + req.param( 'query' ) + '%" ';
-
-	// condition untuk kategori tipe buku
-	// if( req.params.type != undefined ) conditions += ' AND journal.journal_type = "' + req.params.type + '" ';
-
 	if( req.query.limit != undefined ) {limit = req.query.limit;}
 
 	// Menghitung banyak buku
