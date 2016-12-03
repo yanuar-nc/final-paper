@@ -1,0 +1,11 @@
+- Identifikasi masalah halaman dua
+- contoh stikom masih menggunakan open akses tapi masih pake produk yang sama
+- saat mendefinisikan masalah
+
+tujuannya jadinya
+- mencari platform yang lebih manteb
+
+Blackbox dan whitebox
+
+Kesimpulan dan saran
+- 
