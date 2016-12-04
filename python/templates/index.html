@@ -1,0 +1,14 @@
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Keywords</th>
+		<th>Author</th>
+	</tr>
+	{% for journal in journals %}
+	<tr>
+		<td>{{ journal.title }}</td>
+		<td>{{ journal.keywords }}</td>
+		<td>{{ journal.author }}</td>
+	</tr>
+	{% endfor %}
+</table>

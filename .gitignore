@@ -6,4 +6,5 @@
 /doc/insert books.sql
 /python/__pycache__
 /python/py3env
+/python/env
 /python/mysite/mysite/__pycache__

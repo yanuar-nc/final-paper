@@ -11,7 +11,7 @@ $curl = curl_init();
 
 curl_setopt_array($curl, array(
   CURLOPT_PORT => "2000",
-  CURLOPT_URL => "http://localhost:2000/journals?limit=100",
+  CURLOPT_URL => "http://10.0.13.90:2000/journals?limit=100",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
