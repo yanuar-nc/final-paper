@@ -1,17 +1,62 @@
+<h2>Input journal (Python)</h2>
 <form action="" method="post">
-    <p>Title: &nbsp; <input type=text name=title></p>
-    <p>Author: &nbsp; <input type=text name=author></p>
-    <p>Abstract: &nbsp; <input type=text name=abstract></p>
-    <p>Keywords: &nbsp; <input type=text name=keywords></p>
-    <p>Image: &nbsp; <input type=text name=image></p>
-    <p>File: &nbsp; <input type=text name=file></p>
-    <p>ISSN: &nbsp; <input type=text name=issn></p>
-    <p>Publisher: &nbsp; <input type=text name=publisher></p>
-    <p>Volume: &nbsp; <input type=text name=volume></p>
-    <p>Page: &nbsp; <input type=text name=page></p>
-    <p>Number: &nbsp; <input type=text name=number></p>
-    <p>Year: &nbsp; <input type=text name=year></p>
-    <p>Month: &nbsp; <input type=text name=month></p>
-    <p>Day: &nbsp; <input type=text name=day></p>
-    <p><input type=submit value=Submit></p>
+    <table>
+        <tr>
+            <th>Title</th>
+            <td><input type="text" name="title"></td>
+        </tr>
+        <tr>
+            <th>Author</th>
+            <td><input type="text" name="author"></td>
+        </tr>
+        <tr>
+            <th>Abstract</th>
+            <td><textarea name="abstract"></textarea></td>
+        </tr>
+        <tr>
+            <th>Keywords</th>
+            <td><input type="text" name="keywords"></td>
+        </tr>
+        <tr>
+            <th>Image (URL)</th>
+            <td><input type="text" name="image"></td>
+        </tr>
+        <tr>
+            <th>File (URL)</th>
+            <td><input type="text" name="file"></td>
+        </tr>
+        <tr>
+            <th>ISSN</th>
+            <td><input type="text" name="issn"></td>
+        </tr>
+        <tr>
+            <th>Publisher</th>
+            <td><input type="text" name="publisher"></td>
+        </tr>
+        <tr>
+            <th>Volume</th>
+            <td><input type="number" name="volume"></td>
+        </tr>
+        <tr>
+            <th>Page</th>
+            <td><input type="text" name="page"></td>
+        </tr>
+        <tr>
+            <th>Number</th>
+            <td><input type="number" name="number"></td>
+        </tr>
+        <tr>
+            <th>Year</th>
+            <td><input type="number" name="year"></td>
+        </tr>
+        <tr>
+            <th>Month (1-12)</th>
+            <td><input type="number" name="month"></td>
+        </tr>
+        <tr>
+            <th>Day (1-31)</th>
+            <td><input type="number" name="day"></td>
+        </tr>
+        <tr><td  rowspan="2"><input type="submit" value="Save" ></td></tr>
+    </table>
 </form>

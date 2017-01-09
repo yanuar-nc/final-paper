@@ -157,8 +157,8 @@ exports.add = function( req, res ) {
 			buildQuery.insert( 'journals' ), 
 			post,
 			function( err, rows ) {
-		        if( err ) fn.getResponse( res, { error: err }, 400 );
-		     	if( rows ) fn.getResponse( res, { 'message': 'Berhasil di simpan' } );
+		        if( err ) fn.getResponse( res, { error: err, params: post }, 400 );
+		     	if( rows ) fn.getResponse( res, { 'message': 'Berhasil di simpan', params: post } );
 			}
 		)
 				 								

@@ -1,14 +1,22 @@
-<table>
-	<tr>
-		<th>Title</th>
-		<th>Keywords</th>
-		<th>Author</th>
-	</tr>
-	{% for journal in journals %}
-	<tr>
-		<td>{{ journal.title }}</td>
-		<td>{{ journal.keywords }}</td>
-		<td>{{ journal.author }}</td>
-	</tr>
-	{% endfor %}
+<h1 style="text-align: center">Python Programming</h1>
+<hr>
+<table border="2" cellpadding="10">
+    <tr>
+        <th>No</th>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Abstract</th>
+    </tr>
+    {% set no = 1 %}
+    {% for journal in journals %}
+        <tr>
+            <td>{{ no }}</td>
+            <td><img src="{{ journal.image }}" height="100"></td>
+            <td><a href="/detail/{{ journal.id }}">{{ journal.title }}</td>
+            <td>{{ journal.author }}</td>
+            <td>{{ journal.abstract }}</td>
+        </tr>
+        {% set no = no + 1 %}
+    {% endfor %}
 </table>

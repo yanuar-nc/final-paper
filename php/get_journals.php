@@ -11,7 +11,7 @@ $curl = curl_init();
 
 curl_setopt_array($curl, array(
   CURLOPT_PORT => "2000",
-  CURLOPT_URL => "http://10.0.13.90:2000/journals?limit=100",
+  CURLOPT_URL => "http://localhost:2000/journals?limit=10",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -29,16 +29,40 @@ $err = curl_error($curl);
 
 curl_close($curl);
 
-if ($err) {
-  echo "cURL Error #:" . $err;
-} else {
-  echo $response;
-}
+$result = json_decode($response);
+$datas  = $result->journals;
+?>
+<h1 style="text-align: center">PHP Programming</h1>
+<hr>
+<table border="2" cellpadding="10">
+    <tr>
+        <th>No</th>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Abstract</th>
+    </tr>
+    <?php $no = 1; foreach( $datas as $data ): ?>
+        <tr>
+            <td><?= $no ?></td>
+            <td><img src="<?= $data->image ?>" height="100"></td>
+            <td><a href="get_detail.php?id=<?= $data->id ?>"><?= $data->title ?></td>
+            <td><?= $data->author ?></td>
+            <td><?= $data->abstract ?></td>
+        </tr>
+    <?php ++$no;   endforeach; ?>
+</table>
+<?php 
+// if ($err) {
+//   echo "cURL Error #:" . $err;
+// } else {
+//   echo $response;
+// }
 
-// $end = strtotime("now");
-// $output = $start - $end / 1000;
-$time_end = microtime(true);
-$time = number_format($time_end - $time_start, 4);
-echo $time;
-echo "<hr>";
-echo "\nProcess time execution: $time seconds\n";
+// // $end = strtotime("now");
+// // $output = $start - $end / 1000;
+// $time_end = microtime(true);
+// $time = number_format($time_end - $time_start, 4);
+// echo "<hr>";
+// echo "\nProcess time execution: $time seconds\n";
+?>

@@ -23,7 +23,7 @@ def index():
     end = 0.0
     # Output
     # return render_template('journals.html', result=datas, time = output)
-    return render_template('index.html', result=journals, time = output)
+    return render_template('index.html', journals=journals, time = output)
 
 # get detail
 @app.route('/detail/<int:journal_id>', methods=['GET'])
@@ -31,15 +31,16 @@ def detail(journal_id):
 
     r = requests.get( host + '/journals/detail/' + str(journal_id), auth=('user', 'pass'))
     # Get json 
-    datas = json.dumps( r.json(), sort_keys=True,indent=4, separators=(',', ': '))
-    
+    response = json.dumps( r.json(), sort_keys=True,indent=4, separators=(',', ': '))
+    journals = json.loads(response)["journal"];
+
     end    = time.time(); # microseconds
     output = round((end - start) / 1000, 4) # convert to milliseconds
 
     # start = 0.0
     end = 0.0
     # Output
-    return render_template('journals.html', result=datas, time = output)
+    return render_template('detail.html', journal=journals, time = output)
 
 # get search
 @app.route('/search/<keyword>', methods=['GET'])
